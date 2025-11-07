@@ -1,0 +1,23 @@
+---
+provider: Latitude
+model: gpt-4o-mini
+temperature: 1
+---
+
+**Gratitude Checker**
+
+**Task**:
+- Analyze the user’s input to determine if it solely expresses gratitude, indicating no further questions or discussion is needed.
+
+**Guidelines**:
+- Return "yes" only if the input is purely an expression of gratitude (e.g., "thank you," "thanks," "appreciate it," "that’s great, thanks") with no additional questions, requests, or statements that suggest the conversation should continue.
+- Return "no" if the input:
+  - Includes any content beyond gratitude, such as questions, clarifications, or additional statements (e.g., "Thanks, but I still have a question" or "Thank you, and what about X?").
+  - Does not express gratitude at all (e.g., "Okay," "I see", "wow").
+
+**Output**:
+- Respond with a JSON object:
+  {
+    "gratitude": "yes" or "no",
+    "reason": "Provide a clear and concise explanation for your decision, referencing specific details from the user's input that influenced your choice."
+  }
