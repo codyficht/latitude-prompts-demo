@@ -1,0 +1,7 @@
+---
+provider: Latitude
+model: gpt-4o-mini
+temperature: 1
+---
+
+Summarize all of this for a search summary!!!!!
